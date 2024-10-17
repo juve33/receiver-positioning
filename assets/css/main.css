@@ -26,7 +26,7 @@ aside {
     overflow: hidden;
 
     background-color: var(--grass-color);
-    background: bottom no-repeat url(/assets/images/pitch.svg),
+    background: bottom no-repeat url('https://juve33.github.io/receiver-positioning/assets/images/pitch.svg'),
                 var(--grass-color);
 }
 
