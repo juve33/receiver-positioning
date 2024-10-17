@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+}
+
+aside {
+    display: none;
+}
+
+.pitch-wrapper {
+    --size: 50px;
+
+    position: relative;
+    height: 100vh;
+    height: 100svh;
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.pitch {
+    position: absolute;
+    bottom: 0;
+    aspect-ratio: 33/60;
+    width: 50%;
+
+    overflow: hidden;
+
+    background-color: var(--grass-color);
+    background: bottom no-repeat url(/assets/images/pitch.svg),
+                var(--grass-color);
+}
+
+.player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--size);
+    width: var(--size);
+
+    position: absolute;
+
+    margin: calc(2 * var(--size));
+
+    overflow: visible;
+
+    z-index: 1;
+}
+
+.player::before {
+    content: attr(number);
+
+    display: block;
+    height: var(--size);
+    width: var(--size);
+
+    text-align: center;
+    line-height: var(--size);
+    font-weight: 900;
+    color: #fff;
+
+    z-index: 10;
+}
+
+.dragging {
+    padding: calc(2 * var(--size));
+    margin: 0;
+
+    z-index: 10;
+}
+
+.chaser::before {
+    box-shadow: inset 0px 0px 0px 1px #000,
+                inset 0px 0px 0px 6px #fff,
+                inset 0px 0px 0px 7px #000;
+    border-radius: 50%;
+}
+
+.beater::before {
+    box-shadow: inset 0px 0px 0px 1px #fff,
+                inset 0px 0px 0px 6px #000,
+                inset 0px 0px 0px 7px #fff;
+}
+
+.teamA::before {
+    background-color: var(--teamA-color);
+}
+
+.teamB::before {
+    background-color: var(--teamB-color);
+}
+
+
+
+/* AREAS OF EFFECT */
+
+.area-of-effect {
+    position: absolute;
+
+    width: 0;
+    height: 0;
+    padding: var(--range);
+}
+
+.teamB.beater+.area-of-effect {
+    --range: 200px;
+
+    background: radial-gradient(#f00 0px, transparent var(--range));
+}
+
+
+
+/* INITIAL POSITIONING */
+
+.player:nth-child(1),
+.player:nth-child(13) {
+    left: calc(0 * var(--size));
+}
+
+.player:nth-child(1)+.area-of-effect,
+.player:nth-child(13)+.area-of-effect {
+    left: calc(2.5 * var(--size) - var(--range));
+}
+
+.player:nth-child(3),
+.player:nth-child(15) {
+    left: calc(1 * var(--size));
+}
+
+.player:nth-child(3)+.area-of-effect,
+.player:nth-child(15)+.area-of-effect {
+    left: calc(3.5 * var(--size) - var(--range));
+}
+
+.player:nth-child(5),
+.player:nth-child(17) {
+    left: calc(2 * var(--size));
+}
+
+.player:nth-child(5)+.area-of-effect,
+.player:nth-child(17)+.area-of-effect {
+    left: calc(4.5 * var(--size) - var(--range));
+}
+
+.player:nth-child(7),
+.player:nth-child(19) {
+    left: calc(3 * var(--size));
+}
+
+.player:nth-child(7)+.area-of-effect,
+.player:nth-child(19)+.area-of-effect {
+    left: calc(5.5 * var(--size) - var(--range));
+}
+
+.player:nth-child(9),
+.player:nth-child(21) {
+    left: calc(4 * var(--size));
+}
+
+.player:nth-child(9)+.area-of-effect,
+.player:nth-child(21)+.area-of-effect {
+    left: calc(6.5 * var(--size) - var(--range));
+}
+
+.player:nth-child(11),
+.player:nth-child(23) {
+    left: calc(5 * var(--size));
+}
+
+.player:nth-child(11)+.area-of-effect,
+.player:nth-child(23)+.area-of-effect {
+    left: calc(7.5 * var(--size) - var(--range));
+}
+
+.player.teamB {
+    top: var(--size);
+}
+
+.player.teamA+.area-of-effect {
+    top: calc(-1.5 * var(--size));
+}
+
+.player.teamB+.area-of-effect {
+    top: calc(-.5 * var(--size));
+}

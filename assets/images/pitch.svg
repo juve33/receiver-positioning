@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 33 60"
+  height="100%">
+
+  <path d="M 0,19 h 33" stroke="#fff" stroke-width=".25" fill="none" />
+  <path d="M 0,30 h 33" stroke="#fff" stroke-width=".25" fill="none" />
+  <path d="M 0,41 h 33" stroke="#fff" stroke-width=".25" fill="none" />
+
+  <path d="
+    M 16.5,13.5
+    v -1.8
+    a 0.4,0.4 0 1 0 0,-0.8
+    a 0.4,0.4 0 1 0 0,0.8
+    z" stroke="#000" stroke-width="0.05" fill="none" />
+  <path d="
+    M 19.25,13.5
+    v -1.35
+    a 0.4,0.4 0 1 0 0,-0.8
+    a 0.4,0.4 0 1 0 0,0.8
+    z" stroke="#000" stroke-width="0.05" fill="none" />
+  <path d="
+    M 13.75,13.5
+    v -0.9
+    a 0.4,0.4 0 1 0 0,-0.8
+    a 0.4,0.4 0 1 0 0,0.8
+    z" stroke="#000" stroke-width="0.05" fill="none" />
+  
+  <path d="
+    M 16.5,46.5
+    v -1.8
+    a 0.4,0.4 0 1 0 0,-0.8
+    a 0.4,0.4 0 1 0 0,0.8
+    z" stroke="#000" stroke-width="0.05" fill="none" />
+  <path d="
+    M 19.25,46.5
+    v -0.9
+    a 0.4,0.4 0 1 0 0,-0.8
+    a 0.4,0.4 0 1 0 0,0.8
+    z" stroke="#000" stroke-width="0.05" fill="none" />
+  <path d="
+    M 13.75,46.5
+    v -1.35
+    a 0.4,0.4 0 1 0 0,-0.8
+    a 0.4,0.4 0 1 0 0,0.8
+    z" stroke="#000" stroke-width="0.05" fill="none" />
+</svg>
